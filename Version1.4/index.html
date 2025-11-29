@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo a Pronunciar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aprendamos a Pronunciar Reconociendo Imagenes</h1>
+            <div class="mode-switcher">
+                <button id="btn-cambiar-modo" class="btn-modo">
+                    <span class="icon"></span>
+                    <span class="text">Cambiar a Modo Práctica Offline</span>
+                </button>
+            </div>
+        </header>
+        
+        <main>
+            <div class="card">
+                <!-- Área para arrastrar y soltar imágenes -->
+                <div class="drop-zone" id="drop-zone">
+                    <div class="drop-content">
+                        <span class="drop-icon">📁</span>
+                        <p>Arrastra una imagen aquí o haz clic para seleccionar</p>
+                        <input type="file" id="file-input" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+                
+                <div class="image-container" id="image-container" style="display: none;">
+                    <img id="imagen-palabra" src="" alt="Imagen de la palabra">
+                </div>
+                
+                <div class="word-display">
+                    <h2 id="palabra-actual">Palabra</h2>
+                    <p id="palabra-reconocida" class="palabra-reconocida"></p>
+                </div>
+                
+                <div class="controls">
+                    <!-- Botón para escuchar pronunciación -->
+                    <button id="btn-escuchar" class="btn-escuchar" disabled>
+                        <span class="icon">🔊</span>
+                        <span class="text">Escucha Como se Pronuncia</span>
+                    </button>
+                    
+                    <!-- Contador de intentos -->
+                    <div class="intentos-container">
+                        <span class="intentos-texto">Intentos restantes: </span>
+                        <span id="contador-intentos" class="contador-intentos">12</span>
+                    </div>
+                    
+                    <!-- Botón del micrófono -->
+                    <button id="btn-microfono" class="btn-microfono" disabled>
+                        <span class="icon">🎤</span>
+                        <span class="text">Presiona para hablar</span>
+                    </button>
+                    
+                    <div class="feedback" id="feedback">
+                        <p>¡Sube una imagen para comenzar!</p>
+                    </div>
+                    
+                    <button id="btn-siguiente" class="btn-siguiente" disabled>
+                        Probar con otra imagen
+                    </button>
+                </div>
+                
+                <div class="progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <span id="contador-palabras">0/0</span>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Para niños mayores de 3 años</p>
+            <p>Version 1.4</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

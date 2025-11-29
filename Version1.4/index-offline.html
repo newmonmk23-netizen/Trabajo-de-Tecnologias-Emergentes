@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamos a Practicar en el Modo Offline</title>
+    <link rel="stylesheet" href="style-offline.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Modo Práctica</h1>
+            <p class="subtitle">Palabras Listas Para Practicar</p>
+            <div class="mode-switcher">
+                <button id="btn-cambiar-modo" class="btn-modo">
+                    <span class="icon">🔄</span>
+                    <span class="text">Cambiar a Modo Reconocimiento Con IA</span>
+                </button>
+            </div>
+        </header>
+        
+        <main>
+            <div class="card">
+                <div class="image-container">
+                    <img id="imagen-palabra" src="" alt="Imagen de la palabra">
+                </div>
+                
+                <div class="word-display">
+                    <h2 id="palabra-actual">Palabra</h2>
+                    <p id="silabas-palabra" class="silabas-palabra"></p>
+                </div>
+                
+                <div class="controls">
+                    <!-- Botón para escuchar pronunciación -->
+                    <button id="btn-escuchar" class="btn-escuchar">
+                        <span class="icon">🔊</span>
+                        <span class="text">Como se Pronuncia</span>
+                    </button>
+                    
+                    <!-- Contador de intentos -->
+                    <div class="intentos-container">
+                        <span class="intentos-texto">Intentos Restantes: </span>
+                        <span id="contador-intentos" class="contador-intentos">12</span>
+                    </div>
+                    
+                    <!-- Botón del micrófono -->
+                    <button id="btn-microfono" class="btn-microfono">
+                        <span class="icon">🎤</span>
+                        <span class="text">Presiona Para Hablar</span>
+                    </button>
+                    
+                    <div class="feedback" id="feedback">
+                        <p>¡Presiona "Siguiente" para comenzar!</p>
+                    </div>
+                    
+                    <div class="navigation-buttons">
+                        <button id="btn-anterior" class="btn-anterior">
+                            Anterior
+                        </button>
+                        <button id="btn-siguiente" class="btn-siguiente">
+                            Siguiente Palabra
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <span id="contador-palabras">0/0</span>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Para niños mayores de 3 años en adelante</p>
+            <p>Version 1.4</p>
+        </footer>
+    </div>
+
+    <script src="script-offline.js"></script>
+</body>
+</html>
